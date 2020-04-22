@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Text RecyclerView</string>
+    <string name="how_this_works">How this works?</string>
+    <string name="library_detail">└ AppCompat - For Design &amp; Structure\n└ RecyclerView - Customized Items Listing\n└ CardView - For card like list item with shadow\n└ FirebaseCore - For accessing Firebase Project\n└ Firestore - For Fetching Firebase List Items\n└ Google Ads - For Showing Banner &amp; Interstitial Ad</string>
+</resources>

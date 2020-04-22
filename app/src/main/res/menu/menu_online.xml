@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menu_how_info"
+        android:icon="@drawable/ic_perm_device_information_black_24dp"
+        android:title="@string/how_this_works"
+        app:showAsAction="always" />
+
+</menu>
