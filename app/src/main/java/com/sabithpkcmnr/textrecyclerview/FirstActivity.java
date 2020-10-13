@@ -21,7 +21,7 @@ public class FirstActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first);
-        MobileAds.initialize(this, "ca-app-pub-2348371936988937~3470761361");
+        MobileAds.initialize(this);
 
         //Show what to ID
         mainBtOnline = findViewById(R.id.mainBtOnline);
@@ -41,7 +41,6 @@ public class FirstActivity extends AppCompatActivity {
                 startActivity(new Intent(FirstActivity.this, ActivityOffline.class));
             }
         });
-
 
         loadAdViewBanner();
     }
