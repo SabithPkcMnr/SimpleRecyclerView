@@ -68,6 +68,12 @@ public class ActivityOffline extends AppCompatActivity {
         //Pointing the offlineAdapter to RecyclerView
         offlineRecyclerView.setAdapter(offlineAdapter);
 
+        //To improve list scroll smoothness
+        offlineRecyclerView.setNestedScrollingEnabled(false);
+
+        //To improve list scroll smoothness
+        offlineRecyclerView.setHasFixedSize(true);
+
         //Calling the method to add all string data to ArrayList
         loadOfflineDataToRecyclerView();
 

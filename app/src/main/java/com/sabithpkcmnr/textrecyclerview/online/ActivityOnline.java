@@ -55,6 +55,8 @@ public class ActivityOnline extends AppCompatActivity {
         LinearLayoutManager linearMgr = new LinearLayoutManager(this);
 
         onlineRecyclerView.setLayoutManager(linearMgr);
+        onlineRecyclerView.setHasFixedSize(true);
+        onlineRecyclerView.setNestedScrollingEnabled(false);
         onlineRecyclerView.setAdapter(onlineAdapter);
 
         loadTextsFromFirebase();
@@ -66,7 +68,7 @@ public class ActivityOnline extends AppCompatActivity {
 
     private void loadInterstitialAd() {
         final InterstitialAd myInter = new InterstitialAd(this);
-        myInter.setAdUnitId("ca-app-pub-2348371936988937/9433534484");
+        myInter.setAdUnitId("ca-app-pub-xxx837xxx6988xxx/xx33534xxx");
         if (myInter.isLoaded()) {
             myInter.show();
         } else {
