@@ -1,4 +1,4 @@
-package com.sabithpkcmnr.textrecyclerview.online;
+package com.sabithpkcmnr.recyclerview.online;
 
 import android.content.Context;
 import androidx.annotation.NonNull;
@@ -9,24 +9,24 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.sabithpkcmnr.textrecyclerview.R;
+import com.sabithpkcmnr.recyclerview.R;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class OnlineAdapter extends RecyclerView.Adapter<OnlineAdapter.ViewHolder> {
 
-    List<OnlineModel> onlineModel;
     Context context;
+    ArrayList<OnlineModel> onlineModel;
 
-    public OnlineAdapter(List<OnlineModel> onlineModel) {
+    public OnlineAdapter(ArrayList<OnlineModel> onlineModel) {
         this.onlineModel = onlineModel;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View postView = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_single_item_style, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_single, parent, false);
         context = parent.getContext();
-        return new ViewHolder(postView);
+        return new ViewHolder(view);
     }
 
 
@@ -41,7 +41,7 @@ public class OnlineAdapter extends RecyclerView.Adapter<OnlineAdapter.ViewHolder
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "You clicked " + myStringTitle + " with postion: " + position, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "You clicked " + myStringTitle + " with position: " + position, Toast.LENGTH_SHORT).show();
             }
         });
     }

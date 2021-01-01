@@ -1,4 +1,4 @@
-package com.sabithpkcmnr.textrecyclerview.online;
+package com.sabithpkcmnr.recyclerview.online;
 
 import androidx.annotation.NonNull;
 import com.google.firebase.firestore.Exclude;

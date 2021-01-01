@@ -1,4 +1,4 @@
-package com.sabithpkcmnr.textrecyclerview.online;
+package com.sabithpkcmnr.recyclerview.online;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
@@ -14,18 +14,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.sabithpkcmnr.textrecyclerview.R;
+import com.sabithpkcmnr.recyclerview.R;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ActivityOnline extends AppCompatActivity {
 
@@ -61,26 +57,7 @@ public class ActivityOnline extends AppCompatActivity {
 
         loadTextsFromFirebase();
 
-        loadInterstitialAd();
-
         showInfoAlert();
-    }
-
-    private void loadInterstitialAd() {
-        final InterstitialAd myInter = new InterstitialAd(this);
-        myInter.setAdUnitId("ca-app-pub-xxx837xxx6988xxx/xx33534xxx");
-        if (myInter.isLoaded()) {
-            myInter.show();
-        } else {
-            myInter.loadAd(new AdRequest.Builder().build());
-        }
-        myInter.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                super.onAdLoaded();
-                myInter.show();
-            }
-        });
     }
 
     private void loadTextsFromFirebase() {
@@ -102,8 +79,6 @@ public class ActivityOnline extends AppCompatActivity {
 
                     onlineAdapter.notifyDataSetChanged();
                     onlineSwipe.setRefreshing(false);
-
-                    loadInterstitialAd();
                 }
             }
         });

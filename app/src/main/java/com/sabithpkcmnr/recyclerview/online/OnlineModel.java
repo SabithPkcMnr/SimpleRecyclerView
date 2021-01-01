@@ -1,4 +1,4 @@
-package com.sabithpkcmnr.textrecyclerview.online;
+package com.sabithpkcmnr.recyclerview.online;
 
 import java.util.Date;
 

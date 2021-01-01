@@ -1,8 +1,6 @@
-package com.sabithpkcmnr.textrecyclerview.offline;
+package com.sabithpkcmnr.recyclerview.offline;
 
-import com.sabithpkcmnr.textrecyclerview.online.OnlineModelExtender;
-
-import java.util.Date;
+import com.sabithpkcmnr.recyclerview.online.OnlineModelExtender;
 
 public class OfflineModel extends OnlineModelExtender {
 

@@ -24,13 +24,18 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.firebase:firebase-core:18.0.0'
     implementation 'com.google.firebase:firebase-firestore:22.0.1'
-    implementation 'com.google.android.gms:play-services-ads:19.6.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.cardview:cardview:1.0.0'
-    implementation 'androidx.multidex:multidex:2.0.1' //Single Dex error fixer
+    implementation 'androidx.multidex:multidex:2.0.1'//Single Dex error fixer
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
+
 
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
-apply plugin: 'com.google.gms.google-services'
+
+//Create firebase project and add your google-service.json file into the app folder and then un-comment below line.
+
+//apply plugin: 'com.google.gms.google-services'

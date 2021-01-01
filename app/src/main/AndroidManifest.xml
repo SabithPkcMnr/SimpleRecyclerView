@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.sabithpkcmnr.textrecyclerview">
+    package="com.sabithpkcmnr.recyclerview">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -11,14 +12,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        tools:ignore="GoogleAppIndexingWarning">
+        android:theme="@style/AppTheme">
 
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-2348371936988937~3470761361"/>
-
-        <activity android:name=".FirstActivity">
+        <activity android:name="com.sabithpkcmnr.recyclerview.FirstActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -26,11 +22,11 @@
         </activity>
 
         <activity
-            android:name=".online.ActivityOnline"
+            android:name="com.sabithpkcmnr.recyclerview.online.ActivityOnline"
             android:label="Firebase(Online) RecyclerView" />
 
         <activity
-            android:name=".offline.ActivityOffline"
+            android:name="com.sabithpkcmnr.recyclerview.offline.ActivityOffline"
             android:label="Offline RecyclerView" />
 
     </application>

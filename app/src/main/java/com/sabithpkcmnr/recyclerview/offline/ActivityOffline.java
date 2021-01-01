@@ -1,31 +1,19 @@
-package com.sabithpkcmnr.textrecyclerview.offline;
+package com.sabithpkcmnr.recyclerview.offline;
 
-import android.annotation.SuppressLint;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.os.Bundle;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
-import androidx.appcompat.app.AlertDialog;
+import android.view.MenuItem;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
-import com.sabithpkcmnr.textrecyclerview.R;
+import com.sabithpkcmnr.recyclerview.R;
 
 import java.util.ArrayList;
 
 public class ActivityOffline extends AppCompatActivity {
-
-    //Variable - Pop up box
-    AlertDialog alertHowTo;
 
     //Variable - ArrayList of String characters
     ArrayList<OfflineModel> offlineModelList;
@@ -76,28 +64,6 @@ public class ActivityOffline extends AppCompatActivity {
 
         //Calling the method to add all string data to ArrayList
         loadOfflineDataToRecyclerView();
-
-
-        //NA NA NA NA NA NA
-        loadInterstitialAd();
-    }
-
-    //NA NA NA NA NA NA
-    private void loadInterstitialAd() {
-        final InterstitialAd myInter = new InterstitialAd(this);
-        myInter.setAdUnitId("ca-app-pub-2348371936988937/9433534484");
-        if (myInter.isLoaded()) {
-            myInter.show();
-        } else {
-            myInter.loadAd(new AdRequest.Builder().build());
-        }
-        myInter.setAdListener(new AdListener() {
-            @Override
-            public void onAdLoaded() {
-                super.onAdLoaded();
-                myInter.show();
-            }
-        });
     }
 
 
@@ -140,41 +106,13 @@ public class ActivityOffline extends AppCompatActivity {
     };
 
     // NA NA NA NA NA NA NA NA NA
-    private void showInfoAlert() {
-        LayoutInflater inflater = getLayoutInflater();
-        @SuppressLint("InflateParams") final View alertLayout = inflater.inflate(R.layout.alert_information, null);
-        final AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        alert.setView(alertLayout);
-        alert.setCancelable(true);
-
-        Button closeBt = alertLayout.findViewById(R.id.alertInfo_bt);
-        closeBt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                alertHowTo.dismiss();
-            }
-        });
-
-        alertHowTo = alert.create();
-        alertHowTo.show();
-    }
-
-    // NA NA NA NA NA NA NA NA NA
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_online, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    // NA NA NA NA NA NA NA NA NA
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if (item.getItemId() == android.R.id.home){
+        if (item.getItemId() == android.R.id.home) {
             finish();
-
-        } else if (item.getItemId() == R.id.menu_how_info) {
-            showInfoAlert();
+            return super.onOptionsItemSelected(item);
         }
-        return super.onOptionsItemSelected(item);
+        return false;
     }
+
 }

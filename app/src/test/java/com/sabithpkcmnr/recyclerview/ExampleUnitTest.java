@@ -1,4 +1,4 @@
-package com.sabithpkcmnr.textrecyclerview;
+package com.sabithpkcmnr.recyclerview;
 
 import org.junit.Test;
 

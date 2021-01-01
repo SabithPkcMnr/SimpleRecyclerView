@@ -1,4 +1,4 @@
-package com.sabithpkcmnr.textrecyclerview;
+package com.sabithpkcmnr.recyclerview;
 
 import android.content.Context;
 import androidx.test.platform.app.InstrumentationRegistry;

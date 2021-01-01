@@ -31,20 +31,11 @@
             android:layout_margin="10dp"
             android:text="Online RecyclerView" />
 
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/adViewFirstPage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            ads:adSize="MEDIUM_RECTANGLE"
-            ads:adUnitId="ca-app-pub-2348371936988937/8339944669" />
-
         <Button
             android:id="@+id/mainBtOffline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Offline RecyclerView" />
-
 
     </LinearLayout>
 

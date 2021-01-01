@@ -1,4 +1,4 @@
-package com.sabithpkcmnr.textrecyclerview.offline;
+package com.sabithpkcmnr.recyclerview.offline;
 
 import android.content.Context;
 import androidx.recyclerview.widget.RecyclerView;
@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.sabithpkcmnr.textrecyclerview.R;
+import com.sabithpkcmnr.recyclerview.R;
 
 import java.util.ArrayList;
 
@@ -23,9 +23,9 @@ public class OfflineAdapter extends RecyclerView.Adapter<OfflineAdapter.ViewHold
 
     @Override
     public OfflineAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = null;
+        View view;
         context = parent.getContext();
-        view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recyclerview_single_item_style, parent, false);
+        view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_single, parent, false);
         return new ViewHolder(view);
     }
 
@@ -41,7 +41,7 @@ public class OfflineAdapter extends RecyclerView.Adapter<OfflineAdapter.ViewHold
         holder.mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "You clicked " + textView_String + " with postion: " + position, Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "You clicked " + textView_String + " with position: " + position, Toast.LENGTH_SHORT).show();
             }
         });
     }
