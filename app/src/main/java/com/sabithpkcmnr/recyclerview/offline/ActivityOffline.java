@@ -101,8 +101,8 @@ public class ActivityOffline extends AppCompatActivity {
             "Hot Eleven",
             "Sparking Twelve",
             "And Thirteen",
-            "Ofcourse Fourteen",
-            "Finally End"
+            "Of course Fourteen",
+            "Finally Fifteen"
     };
 
     // NA NA NA NA NA NA NA NA NA
